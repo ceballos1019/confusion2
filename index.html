@@ -34,6 +34,10 @@
     </div>
   </nav>
 
+  <div id="login-modal" class="modal fade" role="dialog">
+
+  </div>
+
   <header class="jumbotron">
     <div class="container">
       <div class="row row-header">
@@ -45,7 +49,12 @@
           <img src="img/logo.png" class="img-fluid" alt="conFusion Logo">
         </div>
         <div class="col-12 col-sm align-self-center">
-          <a class="btn btn-warning btn-block" href="#reserve-form" role="button">Reserve Table</a>
+          <a class="btn btn-warning btn-block nav-link btn-sm"
+             data-toggle="tooltip" data-html="true"
+             title="Or call us at <br><strong>+852 12345678</strong>"
+            data-placement="bottom" href="#reserve-form" role="button">
+            Reserve Table
+          </a>
         </div>
       </div>
     </div>
@@ -230,6 +239,11 @@
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/tether/dist/js/tether.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
 </body>
 
 </html>
